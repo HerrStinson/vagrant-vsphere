@@ -31,6 +31,8 @@ module VagrantPlugins
       attr_accessor :real_nic_ip
       attr_accessor :notes
       attr_accessor :wait_for_sysprep
+      attr_accessor :networks
+      attr_accessor :disks
 
       attr_reader :custom_attributes
 
@@ -39,6 +41,8 @@ module VagrantPlugins
         @wait_for_sysprep = UNSET_VALUE
         @custom_attributes = {}
         @extra_config = {}
+        @networks = []
+        @disks = []
       end
 
       def finalize!
